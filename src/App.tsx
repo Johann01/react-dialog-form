@@ -1,113 +1,113 @@
-import * as Dialog from '@radix-ui/react-dialog'
-import './App.css'
+import * as Dialog from "@radix-ui/react-dialog";
+import "./App.css";
 
 const textFields = [
   {
-    id: 'firstName',
-    label: 'First name',
-    type: 'text',
-    placeholder: 'Avery',
-    autoComplete: 'given-name',
+    id: "firstName",
+    label: "First name",
+    type: "text",
+    placeholder: "Avery",
+    autoComplete: "given-name",
   },
   {
-    id: 'lastName',
-    label: 'Last name',
-    type: 'text',
-    placeholder: 'Morgan',
-    autoComplete: 'family-name',
+    id: "lastName",
+    label: "Last name",
+    type: "text",
+    placeholder: "Morgan",
+    autoComplete: "family-name",
   },
   {
-    id: 'email',
-    label: 'Email address',
-    type: 'email',
-    placeholder: 'avery@email.com',
-    autoComplete: 'email',
+    id: "email",
+    label: "Email address",
+    type: "email",
+    placeholder: "avery@email.com",
+    autoComplete: "email",
   },
   {
-    id: 'phone',
-    label: 'Phone number',
-    type: 'tel',
-    placeholder: '+1 (415) 555-1010',
-    autoComplete: 'tel',
+    id: "phone",
+    label: "Phone number",
+    type: "tel",
+    placeholder: "+1 (415) 555-1010",
+    autoComplete: "tel",
   },
   {
-    id: 'company',
-    label: 'Company',
-    type: 'text',
-    placeholder: 'Atlas Studio',
-    autoComplete: 'organization',
+    id: "company",
+    label: "Company",
+    type: "text",
+    placeholder: "Atlas Studio",
+    autoComplete: "organization",
   },
   {
-    id: 'title',
-    label: 'Job title',
-    type: 'text',
-    placeholder: 'Product designer',
-    autoComplete: 'organization-title',
+    id: "title",
+    label: "Job title",
+    type: "text",
+    placeholder: "Product designer",
+    autoComplete: "organization-title",
   },
   {
-    id: 'website',
-    label: 'Website',
-    type: 'url',
-    placeholder: 'https://example.com',
-    autoComplete: 'url',
+    id: "website",
+    label: "Website",
+    type: "url",
+    placeholder: "https://example.com",
+    autoComplete: "url",
   },
   {
-    id: 'birthday',
-    label: 'Birthday',
-    type: 'date',
-    placeholder: '',
-    autoComplete: 'bday',
+    id: "birthday",
+    label: "Birthday",
+    type: "date",
+    placeholder: "",
+    autoComplete: "bday",
   },
   {
-    id: 'address',
-    label: 'Street address',
-    type: 'text',
-    placeholder: '123 Market Street',
-    autoComplete: 'street-address',
+    id: "address",
+    label: "Street address",
+    type: "text",
+    placeholder: "123 Market Street",
+    autoComplete: "street-address",
   },
   {
-    id: 'city',
-    label: 'City',
-    type: 'text',
-    placeholder: 'San Francisco',
-    autoComplete: 'address-level2',
+    id: "city",
+    label: "City",
+    type: "text",
+    placeholder: "San Francisco",
+    autoComplete: "address-level2",
   },
   {
-    id: 'region',
-    label: 'State / Region',
-    type: 'text',
-    placeholder: 'California',
-    autoComplete: 'address-level1',
+    id: "region",
+    label: "State / Region",
+    type: "text",
+    placeholder: "California",
+    autoComplete: "address-level1",
   },
   {
-    id: 'postal',
-    label: 'Postal code',
-    type: 'text',
-    placeholder: '94103',
-    autoComplete: 'postal-code',
-    inputMode: 'numeric',
+    id: "postal",
+    label: "Postal code",
+    type: "text",
+    placeholder: "94103",
+    autoComplete: "postal-code",
+    inputMode: "numeric",
   },
   {
-    id: 'experience',
-    label: 'Years of experience',
-    type: 'text',
-    placeholder: '8',
-    inputMode: 'numeric',
-    pattern: '[0-9]*',
+    id: "experience",
+    label: "Years of experience",
+    type: "text",
+    placeholder: "8",
+    inputMode: "numeric",
+    pattern: "[0-9]*",
   },
   {
-    id: 'emergencyName',
-    label: 'Emergency contact name',
-    type: 'text',
-    placeholder: 'Sam Rivera',
+    id: "emergencyName",
+    label: "Emergency contact name",
+    type: "text",
+    placeholder: "Sam Rivera",
   },
   {
-    id: 'emergencyPhone',
-    label: 'Emergency contact phone',
-    type: 'tel',
-    placeholder: '+1 (415) 555-2020',
+    id: "emergencyPhone",
+    label: "Emergency contact phone",
+    type: "tel",
+    placeholder: "+1 (415) 555-2020",
   },
-]
+];
 
 function App() {
   return (
@@ -127,32 +127,29 @@ function App() {
           <Dialog.Portal>
             <Dialog.Overlay className="dialog-overlay" />
             <Dialog.Content className="dialog-content">
-              <div className="dialog-header">
-                <div>
-                  <Dialog.Title className="dialog-title">
-                    Onboarding details
-                  </Dialog.Title>
-                  <Dialog.Description className="dialog-description">
-                    Fill this out on mobile to test keyboard behavior. Every
-                    field should remain reachable when the keyboard is open.
-                  </Dialog.Description>
-                </div>
-                <Dialog.Close asChild>
-                  <button
-                    className="icon-button"
-                    type="button"
-                    aria-label="Close"
-                  >
-                    ×
-                  </button>
-                </Dialog.Close>
-              </div>
-
               <form
                 id="dialog-form"
                 className="dialog-form"
                 onSubmit={(event) => event.preventDefault()}
               >
+                <div className="dialog-header">
+                  <Dialog.Close asChild>
+                    <button
+                      className="icon-button"
+                      type="button"
+                      aria-label="Close"
+                    >
+                      ×
+                    </button>
+                  </Dialog.Close>
+                </div>
+                <Dialog.Title className="dialog-title">
+                  Onboarding details
+                </Dialog.Title>
+                <Dialog.Description className="dialog-description">
+                  Fill this out on mobile to test keyboard behavior. Every field
+                  should remain reachable when the keyboard is open.
+                </Dialog.Description>
                 {textFields.map((field) => (
                   <div className="field" key={field.id}>
                     <label htmlFor={field.id}>{field.label}</label>
@@ -231,26 +228,26 @@ function App() {
                     placeholder="Anything else we should know?"
                   />
                 </div>
-              </form>
 
-              <div className="dialog-footer">
-                <button className="button ghost" type="button">
-                  Save draft
-                </button>
-                <button
-                  className="button primary"
-                  type="submit"
-                  form="dialog-form"
-                >
-                  Submit form
-                </button>
-              </div>
+                <div className="dialog-footer">
+                  <button className="button ghost" type="button">
+                    Save draft
+                  </button>
+                  <button
+                    className="button primary"
+                    type="submit"
+                    form="dialog-form"
+                  >
+                    Submit form
+                  </button>
+                </div>
+              </form>
             </Dialog.Content>
           </Dialog.Portal>
         </Dialog.Root>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
